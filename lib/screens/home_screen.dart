@@ -51,19 +51,26 @@ class HomeScreen extends StatelessWidget {
                 flex: 2,
               ),
 
-                 Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  height: 60,
-                  width: double.infinity,
-                  child: const Center(
-                      child: Text(
-                    'Get Started',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  )),
+                 GestureDetector(
+                   onTap: (){
+
+                     Navigator.pushNamed(context, 'SearchScreen');
+
+                   },
+                   child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    height: 60,
+                    width: double.infinity,
+                    child: const Center(
+                        child: Text(
+                      'Get Started',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    )),
                 ),
+                 ),
 
               const Spacer(
                 flex: 1,

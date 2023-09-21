@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/screens/home_screen.dart';
 import 'package:weather_app/screens/search_screen.dart';
 
-
 void main() {
   runApp(const WeatherApp());
 }
@@ -12,11 +11,14 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
-
+    return MaterialApp(
+      routes: {
+        'HomeScreen': (context) => const HomeScreen(),
+        'SearchScreen': (context) => const SearchScreen(),
+      },
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SearchScreen(),
+      home: const Scaffold(
+        body: HomeScreen(),
       ),
     );
   }
